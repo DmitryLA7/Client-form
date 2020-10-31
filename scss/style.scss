@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+body{
+  min-height: 140vh;
+  background: linear-gradient(45deg, #58be50, #35beb6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.container{
+  padding: 60px 40px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+  h1{
+    color: #111;
+    margin-bottom: 45px;
+    line-height: 1em;
+    font-weight: 500;
+    padding-left: 10px;
+    border-left: 5px solid #58be50;}
+
+  h2{
+    width: 100%;
+    padding-bottom: 30px;
+    line-height: 1em;
+    font-weight: 400;
+  }
+}
+.inputBox{
+  position: relative;
+  width: calc((100% - 20px) / 2);
+  margin-bottom: 35px;
+  margin-left: 10px;
+  display: flex;
+  .multipleLabel{
+    position: relative;
+    top: -25px;
+    white-space: nowrap;
+    width: 0;
+    font-weight: 300;
+  }
+    &:last-child{
+      margin-bottom: 0;
+      width: 100%;
+    }
+    input{
+      top: 0;
+      left: 0;
+      width: 100%;
+      max-height: 40px;
+      border: 1px solid #111;
+      background: transparent;
+      padding: 10px;
+      border-radius: 4px;
+      box-sizing: border-box;
+      outline: none;
+      font-size: 16px;
+      color: #111;
+      font-weight: 400;
+    }
+    select{
+      top: 0;
+      left: 0;
+      height:60px;
+      min-width: 140px;
+      border: 1px solid #111;
+      background: transparent;
+      border-radius: 4px;
+      box-sizing: border-box;
+      outline: none;
+      font-size: 21px;
+      color: #111;
+      font-weight: 300;
+      margin-right: 10px;
+    }
+    span{
+      position: absolute;
+      top: 1px;
+      left: 1px;
+      padding: 10px;
+      display: inline-block;
+      font-size: 16px;
+      color: #111;
+      font-weight: 300;
+      transition: 0.5s;
+      pointer-events: none;
+    }
+    input:empty ~ span{
+       transform: translateX(-10px) translateY(-32px);
+     }
+    option{
+      font-size: 18px;
+      font-weight: 300;
+    }
+    input[type="submit"]{
+      background: #2196f3;
+      color: #fff;
+      border: none;
+      max-width: 120px;
+      cursor: pointer;
+      font-weight: 500;
+    }
+    input[type="submit"]:hover{
+      background: #58be50;
+    }
+    input[type="radio"]{
+      width: 30px;
+    }
+    input[type="checkbox"]{
+      width: 30px;
+    }
+}
+.clientData{
+  display: flex;
+  flex-flow: row wrap;
+  width: inherit;
+  margin-left: -10px;
+}
+@media screen and (max-width: 700px) {
+  .inputBox{
+    width: calc((100% - 20px) / 1);
+  }
+  .container{
+    max-width: 400px;
+    padding: 40px 40px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  body{
+    min-height: 120vh;
+  }
+}

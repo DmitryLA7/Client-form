@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang='ru' dir='ltr'>
+  <head>
+    <meta charset='utf-8'>
+    <title>Client form</title>
+    <meta name="viewport" content="width=device-width,initial-scale=0.6">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <div class="container" id="app">
+      <h1>Форма создания клиента</h1>
+      <form class="clientData" onsubmit="alert('Клиент создан!')">
+        <h2>О клиенте</h2>
+        <div class="inputBox">
+          <input type="text" id="surname" required="required">
+          <span>Фамилия</span>
+        </div>
+        <div class="inputBox">
+          <input type="text" id="name" required="required">
+          <span>Имя</span>
+        </div>
+        <div class="inputBox">
+          <input type="text">
+          <span>Отчество</span>
+        </div>
+        <div class="inputBox">
+          <input type="text" id="birthday" required="required">
+          <span>Дата рождения</span>
+        </div>
+        <div class="inputBox">
+          <input type="tel" id="number" maxlength='11' pattern="[7-8]{1}[0-9]{10}" placeholder="7(999)999-99-99" required="required">
+          <span>Номер телефона</span>
+        </div>
+        <div class="inputBox">
+          <input type="radio" name="radio"><label for="radio">Муж</label>
+          <input type="radio" name="radio"><label for="radio">Жен</label>
+        </div>
+        <div class="inputBox">
+        <label class="multipleLabel">Группа клиентов</label>
+        <select name="multiple" id="group" multiple size="3" required="required">
+          <option>VIP</option>
+          <option>Проблемные</option>
+          <option>ОМС</option>
+        </select>
+        <label class="multipleLabel">Лечащий врач</label>
+        <select name="multiple">
+          <option>Иванов</option>
+          <option>Захаров</option>
+          <option>Чернышева</option>
+        </select>
+        </div>
+        <div class="inputBox">
+          <input type="checkbox" name="checkbox" value=""><label for="checkbox">Отправлять смс</label>
+        </div>
+        <h2>Адрес</h2>
+        <div class="inputBox">
+          <input type="text">
+          <span>Индекс</span>
+        </div>
+        <div class="inputBox">
+          <input type="text" id="city">
+          <span>Страна</span>
+        </div>
+        <div class="inputBox">
+          <input type="text">
+          <span>Область</span>
+        </div>
+        <div class="inputBox">
+          <input type="text" required="required">
+          <span>Город</span>
+        </div>
+        <div class="inputBox">
+          <input type="text">
+          <span>Улица</span>
+        </div>
+        <div class="inputBox">
+          <input type="text">
+          <span>Дом</span>
+        </div>
+        <h2>Паспорт</h2>
+        <div class="inputBox">
+          <label class="multipleLabel">Тип документа</label>
+          <select name="multiple" required="required">
+            <option>Паспорт</option>
+            <option>Свидетельство о рождении</option>
+            <option>Вод. удостоверение</option>
+          </select>
+        </div>
+        <div class="inputBox">
+          <input type="text">
+          <span>Серия</span>
+        </div>
+        <div class="inputBox">
+          <input type="text">
+          <span>Номер</span>
+        </div>
+        <div class="inputBox">
+          <input type="text">
+          <span>Кем выдан</span>
+        </div>
+        <div class="inputBox">
+          <input type="text" id="docDate" required="required">
+          <span>Дата выдачи</span>
+        </div>
+        <div class="inputBox">
+          <input type="submit" required="Отправить">
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
